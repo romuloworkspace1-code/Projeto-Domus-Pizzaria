@@ -1,0 +1,41 @@
+/* Estilos específicos para a página CARDÁPIO */
+
+.menu-page {
+    padding-top: 2rem;
+}
+
+.menu-category {
+    margin-bottom: 3rem;
+}
+
+.menu-category h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+   
+}
+.card-menu-item{
+     object-fit: cover;
+
+}
+
+.menu-item .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+   
+    
+}
+
+.menu-item .add-to-cart {
+    background-color: rgb(0, 0, 0); /* Botão azul no cardápio */
+}
+
+.menu-item .add-to-cart:hover {
+    background-color: #ffae01;
+}
+
+
+
