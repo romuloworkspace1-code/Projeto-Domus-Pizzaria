@@ -1,0 +1,146 @@
+/* ========================================================================= */
+/* --- CSS DE ANIMAÇÃO DA LOGO SIMPLIFICADO --- */
+/* ========================================================================= */
+
+.logo-link {
+    display: flex; /* Para centralizar as imagens uma sobre a outra */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necessário para posicionar as imagens sobrepostas */
+    width: 80px; /* Largura fixa para a área da logo */
+    height: 60px; /* Altura fixa para a área da logo */
+}
+
+/* Imagem da logo FECHADA */
+.logo-fechada {
+    max-height: 110px;
+    width: auto;
+    position: absolute; /* Permite que fique sobreposta */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1; /* Visível por padrão */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+/* Imagem da logo ABERTA */
+.logo-aberta {
+    max-height: 110px;
+    width: auto;
+    position: absolute; /* Permite que fique sobreposta */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0; /* Escondida por padrão */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+/* Estado de Animação (Quando a classe 'is-animating' é adicionada ao .logo-link) */
+.logo-link.is-animating .logo-fechada {
+    opacity: 0; /* Esconde a caixa fechada */
+}
+
+.logo-link.is-animating .logo-aberta {
+    opacity: 1; /* Mostra a caixa aberta */
+}
+/* ========================================================================= */
+/* --- POPUP DE SAÍDA (CUPOM) --- */
+/* ========================================================================= */
+
+.exit-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Fundo escuro transparente */
+    z-index: 200; /* Garante que fique acima de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Oculto por padrão */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Classe que o JavaScript vai adicionar para mostrar o popup */
+.exit-popup-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.exit-popup-content {
+    background: var(--white-color, #fff); /* Usa variável ou branco */
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    color: #333; /* Cor do texto padrão (Modo Claro) */
+    
+    /* Animação de entrada (zoom) */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+.exit-popup-overlay.visible .exit-popup-content {
+    transform: scale(1);
+}
+
+.exit-popup-content h2 {
+    color: var(--primary-color, #000);
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.exit-popup-content p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botão de Fechar (X) */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.coupon-code {
+    background: #f4f4f4;
+    border: 2px dashed #ffae00; /* Usando o amarelo do seu tema */
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- Ajustes para o Dark Mode --- */
+body.dark-mode .exit-popup-content {
+    background: #2b2b2b; /* Cor do card no dark mode */
+    color: #f0f0f0;
+}
+body.dark-mode .exit-popup-content h2,
+body.dark-mode .exit-popup-content p {
+    color: #ffffff;
+}
+body.dark-mode .coupon-code {
+    background: #333;
+    border-color: #ffae00;
+    color: #f0f0f0;
+}
+body.dark-mode .close-popup {
+    color: #888;
+}

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ========================================================================= */
+/* --- 1. ESTILOS GERAIS E LAYOUT PRINCIPAL --- */
+/* ========================================================================= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    /* Altura mínima para garantir que ocupa a tela toda, mas permite crescer */
+    min-height: 100vh;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imgk/fundo.png);
+    backdrop-filter: blur(10px);
+    /* Adiciona um padding para respirar em telas pequenas */
+    padding: 20px 0; 
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px; /* Adicionado para melhor visual */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adicionado para profundidade */
+}
+
+/* ========================================================================= */
+/* --- 2. HEADER E BOTÃO X --- */
+/* ========================================================================= */
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Garante que o header ocupa todo o espaço horizontal do .form */
+    align-items: center;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: rgb(255, 208, 0);
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: rgba(229, 232, 233, 0.945);
+    padding: 0.4rem 1rem;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button button:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: #333; /* Cor do X */
+    font-weight: bold;
+}
+
+.login-button button:hover a {
+    color: #fff; /* X branco ao passar o mouse */
+}
+
+
+/* ========================================================================= */
+/* --- 3. INPUTS E AGRUPAMENTOS --- */
+/* ========================================================================= */
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 100%; /* Ocupa a largura total */
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    /* Define o tamanho padrão de dois inputs por linha (50% menos a margem/gap) */
+    width: calc(50% - 10px); 
+}
+
+/* Garante que o último input na linha ocupe 100% se for necessário */
+/* Ex: Se você tiver um campo de input que deva ser largura total, defina a classe .full-width-input no HTML */
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid rgb(177, 145, 1);
+    box-shadow: 0 0 8px rgba(255, 208, 0, 0.5);
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+/* ========================================================================= */
+/* --- 4. GÊNERO --- */
+/* ========================================================================= */
+
+.gender-inputs {
+    width: 100%;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+    margin-left: 0.3rem;
+}
+
+
+/* ========================================================================= */
+/* --- 5. BOTÃO CONTINUAR --- */
+/* ========================================================================= */
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: rgb(221, 212, 212);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Estilização do texto diretamente no botão */
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.continue-button button:hover {
+    background-color: rgb(92, 187, 3);
+}
+
+/* ========================================================================= */
+/* --- 6. RESPONSIVIDADE (MEDIA QUERIES CORRIGIDAS) --- */
+/* ========================================================================= */
+
+/* Ponto de Ruptura 1: Telas de Tablet Grande e Desktop Pequeno (máx. 1330px) */
+@media screen and (max-width: 1330px) {
+    .form {
+        width: 70%; 
+    }
+}
+
+/* Ponto de Ruptura 2: Telas de Tablet e Celular Grande (máx. 992px) */
+@media screen and (max-width: 992px) {
+    .form {
+        width: 85%;
+        padding: 2.5rem;
+    }
+    
+    /* Inputs: Mantém 2 colunas, mas ajusta o espaçamento */
+    .input-box {
+        width: calc(50% - 10px); 
+    }
+}
+
+/* Ponto de Ruptura 3: Celulares (máx. 600px) */
+@media screen and (max-width: 600px) {
+    
+    .form {
+        width: 95%; 
+        padding: 1.5rem;
+    }
+    
+    /* Header: Coloca o título e o botão X em cima/embaixo */
+    .form-header {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .login-button {
+        margin-top: 1rem;
+    }
+    
+    /* Inputs: Todos os campos em 1 coluna */
+    .input-group {
+        flex-direction: column;
+        gap: 0; /* Remove o gap de coluna */
+    }
+
+    .input-box {
+        width: 100%; /* Ocupa a largura total */
+    }
+
+    /* Gênero: Um abaixo do outro */
+    .gender-group {
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 0.5rem;
+    }
+}
+
+/* Adicione no final do seu arquivo cadastro.css */
+/* Estilo base para o indicador de força da senha */
+#password-strength-indicator {
+    height: 15px; /* Altura para evitar pulo no layout */
+    text-align: left;
+    transition: color 0.3s;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Domus pizza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+    <link rel="stylesheet" href="css/animação.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+   <a href="index.html" class="logo-link">
+    <img src="img/logofechada.png" alt="Domus Pizza Logo Fechada" class="logo-fechada">
+    <img src="img/logoaberta.png" alt="" class="logo-aberta">
+    </a>
+                <ul class="nav-links">
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="cardapio.html"> Cardápio </a></li>
+                    <li><a href="onde.html" > Onde Estamos </a></li>
+                    <li><a href="sobre.html"> Sobre Nós </a></li>
+                 
+                </ul>
+                 <div class="right-icons">
+                <div class="theme-switch-container">
+            <i class="fas fa-sun sun-icon"></i>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+            <i class="fas fa-moon moon-icon"></i>
+                </div>
+                 </div>
+                   <a href="cadastro.html"class="login-icon-link active"><i class="fa-solid fa-user"></i></a>
+                
+                <a href="carrinho.html" class="cart-icon-link active" aria-label="Ver meu carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="menu-page">
+        <div class="container">
+            <h1>Nosso Cardápio</h1>
+
+            <section class="menu-category">
+                <h2>Pizzas Clássicas</h2>
+                <div class="grid-container">
+                    <div class="card menu-item">
+                        <img src="img/portuguesa.jpg" alt="Pizza de Portuguesa">
+                        <h3>Portuguesa</h3>
+                        <p>Molho de tomate, presunto, ovos, cebola, azeitonas e queijo derretido.</p>
+                        <span class="price">R$ 49,90</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                    <div class="card menu-item">
+                        <img src="img/frango.jpg" alt="Pizza de Frango com Catupiry">
+                        <h3>Frango com catupiry</h3>
+                        <p>Frango desfiado temperado, catupiry cremoso, mozzarella e orégano.</p>
+                        <span class="price">R$ 45,90</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                    <div class="card menu-item">
+                        <img src="img/calabresa.jpg" alt="Pizza de Calabresa">
+                        <h3>Calabresa</h3>
+                        <p>Molho de tomate, mozzarella, calabresa fatiada e cebola.</p>
+                        <span class="price">R$ 44,90</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                     <div class="card menu-item">
+                        <img src="img/margherita.jpg" alt="Pizza de Marghuerita">
+                        <h3>Margherita</h3>
+                        <p>Molho de tomate, mozzarella e folhas de manjericão fresco.</p>
+                        <span class="price">R$ 48,90</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                     <div class="card menu-item">
+                        <img src="img/queijo.jpg" alt="Pizza de Queijo">
+                        <h3>Quatro quiejos</h3>
+                        <p>Mozzarella, parmesão, provolone e gorgonzola em perfeita harmonia.</p>
+                        <span class="price">R$ 46,90</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                     <div class="card menu-item">
+                        <img src="img/pepperoni.jpg" alt="Pizza de Pepperoni">
+                        <h3>Pepperoni</h3>
+                        <p>Molho de tomate fresco, mozzarella e fatias generosas de pepperoni.</p>
+                        <span class="price">R$ 47,90</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h2>Bebidas</h2>
+                <div class="grid-container">
+                    <div class="card menu-item">
+                        <img src="img/cocalata.jpeg" alt="Refrigerante Lata">
+                        <h3>Refrigerante Lata</h3>
+                        <p>Escolha seu sabor favorito (350ml).</p>
+                        <span class="price">R$ 6,00</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                    <div class="card menu-item">
+                        <img src="img/agua.webp" alt="Água Mineral">
+                        <h3>Água Mineral</h3>
+                        <p>Água sem gás (500ml).</p>
+                        <span class="price">R$ 4,00</span>
+                        <button class="cta-button add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+          <footer class="site-footer">
+        <div class="container">
+            <nav class="footer-top-links">
+                <ul>
+                    <li><a href="#">Internacional</a></li>
+                    <li><a href="#">Sobre a Pizza</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Seja um Franqueado</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-social-brand">
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="brand-logo">
+                    <img src="img/logococa.jpg" alt="Coca-Cola - Finalize seu pedido com uma bebida!">
+                </div>
+            </div>
+
+            <div class="footer-legal">
+                <p>Serviço disponível nas áreas de entrega Domus Pizza, todos os dias, de acordo com o horário de funcionamento de cada loja. A Domus pizza se reserva no direito de alterar ou encerrar as ofertas sem aviso prévio. Todas as promoções expostas não são cumulativas entre si ou com outras promoções e descontos. Cobramos taxa de entrega. Todos os nossos produtos CONTÊM GLÚTEN. Alérgicos: todos os nossos produtos contêm ou podem conter traços de Trigo, Ovos, Leite e Soja. As formas de pagamento variam de acordo com cada loja. Imagens meramente ilustrativas. Consulte se sua loja de preferência pratica a promoção escolhida Em caso de dúvidas, consulte nosso SAC: <a href="mailto:relacionamento@domuspizza.com.br">relacionamento@domuspizza.com.br</a>.</p>
+                <p>*Preços "a partir de" podem sofrer pequenas variações de acordo com a região da loja. Confirme o preço no carrinho de compras antes de confirmar seu pedido.</p>
+                <p>DOMUS PIZZA , Av. das Américas, 500 - Bloco 7 – 3º andar – Barra da Tijuca, Rio de Janeiro/RJ - 22640-100</p>
+                <p>S.A.C. Dúvidas, reclamações, sugestões e / ou elogios envie um e-mail para: <a href="mailto:relacionamento@domuspizza.com.br">relacionamento@domuspizza.com.br</a></p>
+                <p>Informações sobre o uso de dados pessoais e pedidos de descadastro do banco de dados, <a href="#">clique aqui</a> - Encarregado de Dados.</p>
+            </div>
+          </div>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>
